@@ -3,7 +3,7 @@
 #include <memory>
 #include "ThreadPool.h"
 
-const int COUNT_OF_NUMBERS = 1000;
+const int COUNT_OF_NUMBERS = 10;
 
 void job(int* arr, int n, int start, int end);
 int* initArray(int n);
