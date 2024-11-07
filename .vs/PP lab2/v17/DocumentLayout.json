@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Niko\\Desktop\\PP lab2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|solutionrelative:PP lab2\\PP lab2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|solutionrelative:PP lab2\\ThreadPool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|solutionrelative:PP lab2\\PP lab2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -36,40 +36,35 @@
               "RelativeDocumentMoniker": "PP lab2\\ThreadPool.h",
               "ToolTip": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.h",
               "RelativeToolTip": "PP lab2\\ThreadPool.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-01T11:43:17.203Z"
+              "WhenOpened": "2024-11-01T11:43:17.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PP lab2.cpp",
-              "DocumentMoniker": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp",
-              "RelativeDocumentMoniker": "PP lab2\\PP lab2.cpp",
-              "ToolTip": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp",
-              "RelativeToolTip": "PP lab2\\PP lab2.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-25T13:09:56.812Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 239,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "ThreadPool.cpp",
               "DocumentMoniker": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.cpp",
               "RelativeDocumentMoniker": "PP lab2\\ThreadPool.cpp",
               "ToolTip": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.cpp",
               "RelativeToolTip": "PP lab2\\ThreadPool.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-01T11:43:07.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PP lab2.cpp",
+              "DocumentMoniker": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp",
+              "RelativeDocumentMoniker": "PP lab2\\PP lab2.cpp",
+              "ToolTip": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp",
+              "RelativeToolTip": "PP lab2\\PP lab2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-25T13:09:56.812Z",
               "EditorCaption": ""
             }
           ]

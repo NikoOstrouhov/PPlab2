@@ -3,7 +3,7 @@
 #include <memory>
 #include "ThreadPool.h"
 
-const int COUNT_OF_NUMBERS = 50000;
+const int COUNT_OF_NUMBERS = 160;
 
 void job(int* arr, int start, int end);
 int* initArray(int n);
@@ -23,7 +23,6 @@ int main()
 	}
 	end_b = n - 1;
 	pool.fillQueueJobs(std::bind(job, arr, start_b, end_b));
-	pool.start();
 	//delete[]arr;
 }
 

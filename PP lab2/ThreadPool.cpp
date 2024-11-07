@@ -3,21 +3,6 @@
 ThreadPool::ThreadPool()
 {
     m_count_of_threads = std::thread::hardware_concurrency();
-}
-ThreadPool::~ThreadPool()
-{
-    for (int i = 0; i < m_threads.size(); i++)
-    {
-        if (m_threads[i].joinable())
-        {
-            std::cout << "Thread id: " << m_threads[i].get_id() << " is done\n";
-            m_threads[i].join();
-        }
-    }
-    m_threads.clear();
-}
-void ThreadPool::start()
-{
     if (m_count_of_threads)
     {
         for (int i = 0; i < m_count_of_threads; i++)
@@ -28,7 +13,31 @@ void ThreadPool::start()
 }
 void ThreadPool::fillQueueJobs(const std::function<void()>& job)
 {
-    m_jobs.push(job);
+    {
+        std::lock_guard<std::mutex> lg(m_mutex);
+        m_jobs.push(job);
+    }
+    m_cond.notify_all();
+}
+ThreadPool::~ThreadPool()
+{
+    {
+        std::lock_guard<std::mutex> lg(m_mutex);
+        m_stop = true;
+    }
+    m_cond.notify_all();
+    for (int i = 0; i < m_threads.size(); i++)
+    {
+        if (m_threads[i].joinable())
+        {
+            /*{
+                std::lock_guard<std::mutex> lg(m_mutex);
+                std::cout << "Thread id: " << m_threads[i].get_id() << " is done\n";
+            }*/
+            m_threads[i].join();
+        }
+    }
+    m_threads.clear();
 }
 int ThreadPool::getTreadsCount()
 {
@@ -36,26 +45,21 @@ int ThreadPool::getTreadsCount()
 }
 void ThreadPool::run()
 {
-    if (!m_threads.empty())
+    while (true)
     {
-        while (true)
+        std::function<void()> job;
         {
-            std::function<void()> job;
+            std::unique_lock<std::mutex> lk(m_mutex);
+            std::cout << "Thread id: " << std::this_thread::get_id() << std::endl;
+            m_cond.wait(lk, [this] {return !m_jobs.empty() || m_stop; });
+            if (m_stop)
             {
-                std::lock_guard<std::mutex> lg(m_queueMutex);
-                if (!m_jobs.empty())
-                {
-                    job = m_jobs.front();
-                    m_jobs.pop();
-                    std::cout << "Thread id: " << std::this_thread::get_id() << std::endl;
-                }
-                else
-                {
-                    std::cout << "Thread id: " << std::this_thread::get_id() << " no work \n";
-                    return;
-                }
+                return;
             }
-            job();
+            job = m_jobs.front();
+            m_jobs.pop();
+            std::cout << "Thread id: " << std::this_thread::get_id() << " do work" << std::endl;
         }
+        job();
     }
 }
