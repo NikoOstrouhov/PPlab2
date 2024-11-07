@@ -30,10 +30,10 @@ ThreadPool::~ThreadPool()
     {
         if (m_threads[i].joinable())
         {
-            /*{
+            {
                 std::lock_guard<std::mutex> lg(m_mutex);
                 std::cout << "Thread id: " << m_threads[i].get_id() << " is done\n";
-            }*/
+            }
             m_threads[i].join();
         }
     }

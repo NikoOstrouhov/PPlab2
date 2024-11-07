@@ -1,2 +1,4 @@
-﻿  ThreadPool.cpp
+﻿  PP lab2.cpp
+C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(34,16): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(42,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   PP lab2.vcxproj -> C:\Users\Niko\Desktop\PP lab2\x64\Debug\PP lab2.exe

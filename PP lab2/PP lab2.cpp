@@ -3,7 +3,7 @@
 #include <memory>
 #include "ThreadPool.h"
 
-const int COUNT_OF_NUMBERS = 160;
+const int COUNT_OF_NUMBERS = 1600;
 
 void job(int* arr, int start, int end);
 int* initArray(int n);
@@ -11,6 +11,7 @@ int* initArray(int n);
 int main()
 {
 	ThreadPool pool;
+	std::this_thread::sleep_for(std::chrono::seconds(2));
 	int thread_count = pool.getTreadsCount();
 	int* arr = initArray(COUNT_OF_NUMBERS);
 	int start_b = 0, end_b = COUNT_OF_NUMBERS / thread_count, n = COUNT_OF_NUMBERS;
