@@ -10,6 +10,7 @@ ThreadPool::~ThreadPool()
     {
         if (m_threads[i].joinable())
         {
+            std::cout << "Thread id: " << m_threads[i].get_id() << " is done\n";
             m_threads[i].join();
         }
     }
@@ -46,9 +47,11 @@ void ThreadPool::run()
                 {
                     job = m_jobs.front();
                     m_jobs.pop();
+                    std::cout << "Thread id: " << std::this_thread::get_id() << std::endl;
                 }
                 else
                 {
+                    std::cout << "Thread id: " << std::this_thread::get_id() << " no work \n";
                     return;
                 }
             }
