@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Niko\\Desktop\\PP lab2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|solutionrelative:PP lab2\\ThreadPool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|solutionrelative:PP lab2\\PP lab2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|solutionrelative:PP lab2\\ThreadPool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\Data.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|solutionrelative:PP lab2\\Data.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4294F8B3-1C0B-4EFC-831F-1D5F6F0649B1}|PP lab2\\PP lab2.vcxproj|C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -22,46 +26,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 177,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Data.txt",
+              "DocumentMoniker": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\Data.txt",
+              "RelativeDocumentMoniker": "PP lab2\\Data.txt",
+              "ToolTip": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\Data.txt",
+              "RelativeToolTip": "PP lab2\\Data.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-11-08T16:24:03.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ThreadPool.h",
               "DocumentMoniker": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.h",
               "RelativeDocumentMoniker": "PP lab2\\ThreadPool.h",
               "ToolTip": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.h",
               "RelativeToolTip": "PP lab2\\ThreadPool.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-01T11:43:17.203Z"
+              "WhenOpened": "2024-11-01T11:43:17.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ThreadPool.cpp",
               "DocumentMoniker": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.cpp",
               "RelativeDocumentMoniker": "PP lab2\\ThreadPool.cpp",
               "ToolTip": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\ThreadPool.cpp",
               "RelativeToolTip": "PP lab2\\ThreadPool.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABUAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-01T11:43:07.493Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PP lab2.cpp",
               "DocumentMoniker": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp",
               "RelativeDocumentMoniker": "PP lab2\\PP lab2.cpp",
-              "ToolTip": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp*",
-              "RelativeToolTip": "PP lab2\\PP lab2.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Niko\\Desktop\\PP lab2\\PP lab2\\PP lab2.cpp",
+              "RelativeToolTip": "PP lab2\\PP lab2.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-25T13:09:56.812Z",
               "EditorCaption": ""

@@ -1,48 +1,81 @@
 ﻿#include <iostream>
+#include <fstream>
 #include <ctime>
 #include <memory>
+#include <vector>
+#include <tuple>
 #include "ThreadPool.h"
 
-const int COUNT_OF_NUMBERS = 1600;
+const int COUNT_OF_NUMBERS = 76442;
 
-void job(int* arr, int start, int end);
-int* initArray(int n);
+void job(std::vector<int>& arr, int start, int end, std::vector<std::tuple<int, int, int>>& completed_jobs, std::mutex& jobs_mutex);
+void initArray(std::vector<int>& arr, int n);
 
 int main()
 {
-	ThreadPool pool;
-	std::this_thread::sleep_for(std::chrono::seconds(2));
-	int thread_count = pool.getTreadsCount();
-	int* arr = initArray(COUNT_OF_NUMBERS);
-	int start_b = 0, end_b = COUNT_OF_NUMBERS / thread_count, n = COUNT_OF_NUMBERS;
-	int temp_b = end_b;
-	while(end_b < n)
-	{
-		pool.fillQueueJobs(std::bind(job, arr, start_b, end_b));
-		start_b = end_b + 1;
-		end_b += temp_b;
-	}
-	end_b = n - 1;
-	pool.fillQueueJobs(std::bind(job, arr, start_b, end_b));
-	//delete[]arr;
+    std::ofstream os("Data.txt");
+
+    ThreadPool pool;
+
+    std::cout << "Threads start work\n";
+
+    int thread_count = pool.getTreadsCount();
+
+    std::vector<int> arr;
+    initArray(arr, COUNT_OF_NUMBERS);
+
+    std::vector<std::tuple<int, int, int>> completed_jobs;
+    std::mutex jobs_mutex; 
+
+    if (thread_count != 0)
+    {
+        int end, start;
+        int step = end = COUNT_OF_NUMBERS / thread_count;
+        int n = COUNT_OF_NUMBERS;
+        int i = 0;
+        while (end < n - 1) {
+            start = i * step + i;
+            end = (start + step > n) ? COUNT_OF_NUMBERS - 1: start + step;
+            pool.fillQueueJobs(std::bind(job, std::ref(arr), start, end, std::ref(completed_jobs), std::ref(jobs_mutex)));
+            i++;
+        }
+    }
+
+    pool.waitForCompletion();
+
+    for (auto i : completed_jobs)
+    {
+        os << "Thread " << std::get<0>(i) << " complete job from index " << std::get<1>(i) << " to index " << std::get<2>(i) << std::endl;
+    }
+    
+    std::cout << "\nThreads ended all work and wrote information in Data.txt\n";
 }
 
-void job(int *arr, int start, int end)
+void initArray(std::vector<int>& arr, int n)
 {
-	for (int i = start; i <= end; i++)
-	{
-		arr[i] = sqrt(arr[i]);
-		arr[i] *= arr[i];
-	}
+    srand(time(NULL));
+    for (int i = 0; i < n; i++)
+    {
+        arr.push_back(rand() % 100);
+    }
 }
 
-int* initArray(int n)
+void job(std::vector<int>& arr, int start, int end, std::vector<std::tuple<int, int, int>>& completed_jobs, std::mutex& jobs_mutex)
 {
-	int* arr = new int[n];
-	srand(time(NULL));
-	for (int i = 0; i < n; i++)
-	{
-		arr[i] = rand() % 100;
-	}
-	return arr;
+    std::hash<std::thread::id> hasher;
+    int thread_id = hasher(std::this_thread::get_id());
+
+    if (!arr.empty())
+    {
+        for (int i = start; i <= end; i++)
+        {
+            arr[i] = sqrt(arr[i]);
+            arr[i] *= arr[i];
+        }
+
+        {
+            std::lock_guard<std::mutex> lg(jobs_mutex);
+            completed_jobs.push_back(std::make_tuple(std::abs(thread_id % 10000), start, end));
+        }
+    }
 }
