@@ -50,18 +50,16 @@ void ThreadPool::run()
             }
             job = m_jobs.front();
             m_jobs.pop();
+            m_completed_job_count++;
         }
         job();
     }
 }
-
-void ThreadPool::waitForCompletion()
+int ThreadPool::getJobCount()
 {
-    while (!m_jobs.empty())
-    {
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    }
+    return m_completed_job_count;
 }
+
 int ThreadPool::getTreadsCount()
 {
     return m_count_of_threads;

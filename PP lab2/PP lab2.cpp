@@ -4,16 +4,19 @@
 #include <memory>
 #include <vector>
 #include <tuple>
+#include <string>
 #include "ThreadPool.h"
 
 const int COUNT_OF_NUMBERS = 76442;
 
 void job(std::vector<int>& arr, int start, int end, std::vector<std::tuple<int, int, int>>& completed_jobs, std::mutex& jobs_mutex);
 void initArray(std::vector<int>& arr, int n);
+void waitForCompletion(ThreadPool& pool, std::vector<std::tuple<int, int, int>>& completed_jobs);
 
 int main()
 {
-    std::ofstream os("Data.txt");
+    std::string filename = "Data.txt";
+    std::ofstream os(filename);
 
     ThreadPool pool;
 
@@ -41,14 +44,17 @@ int main()
         }
     }
 
-    pool.waitForCompletion();
+    waitForCompletion(pool, completed_jobs);
 
-    for (auto i : completed_jobs)
     {
-        os << "Thread " << std::get<0>(i) << " complete job from index " << std::get<1>(i) << " to index " << std::get<2>(i) << std::endl;
+        std::lock_guard<std::mutex> lg(jobs_mutex);
+        for (auto i : completed_jobs)
+        {
+            os << "Thread " << std::get<0>(i) << " completed job from index " << std::get<1>(i) << " to index " << std::get<2>(i) << std::endl;
+        }
+
+        std::cout << "\nThreads ended all work and wrote information in " << filename << std::endl;
     }
-    
-    std::cout << "\nThreads ended all work and wrote information in Data.txt\n";
 }
 
 void initArray(std::vector<int>& arr, int n)
@@ -57,6 +63,14 @@ void initArray(std::vector<int>& arr, int n)
     for (int i = 0; i < n; i++)
     {
         arr.push_back(rand() % 100);
+    }
+}
+
+void waitForCompletion(ThreadPool& pool, std::vector<std::tuple<int, int, int>>& completed_jobs)
+{
+    while (pool.getJobCount() != completed_jobs.size())
+    {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }
 
