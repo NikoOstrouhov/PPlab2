@@ -56,6 +56,8 @@ int main()
 
         std::cout << "\nThreads ended all work and wrote information in " << filename << std::endl;
     }
+
+    return 0;
 }
 
 void initArray(std::vector<int>& arr, int n)
