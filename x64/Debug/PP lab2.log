@@ -1,0 +1,11 @@
+﻿  PP lab2.cpp
+C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(62,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(80,19): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(86,26): warning C4244: =: преобразование "double" в "_Ty", возможна потеря данных
+C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(86,26): warning C4244:         with
+C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(86,26): warning C4244:         [
+C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(86,26): warning C4244:             _Ty=int
+C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(86,26): warning C4244:         ]
+  ThreadPool.cpp
+  Создание кода...
+  PP lab2.vcxproj -> C:\Users\Niko\Desktop\PP lab2\x64\Debug\PP lab2.exe
