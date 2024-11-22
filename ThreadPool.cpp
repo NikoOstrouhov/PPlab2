@@ -50,17 +50,20 @@ void ThreadPool::run()
             }
             job = m_jobs.front();
             m_jobs.pop();
-            m_completed_job_count++;
+            m_completed_jobs_count++;
         }
         job();
     }
 }
-int ThreadPool::getJobCount()
+int ThreadPool::getCompletedJobsCount()
 {
-    return m_completed_job_count;
+    {
+        std::lock_guard<std::mutex> lg(m_mutex);
+        return m_completed_jobs_count;
+    }
 }
 
-int ThreadPool::getTreadsCount()
+unsigned int ThreadPool::getTreadsCount()
 {
     return m_count_of_threads;
 }

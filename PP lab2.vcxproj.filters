@@ -29,5 +29,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Data.txt" />
+    <Text Include="End.txt" />
+    <Text Include="ThreadInfo.txt" />
+    <Text Include="Start.txt" />
   </ItemGroup>
 </Project>
