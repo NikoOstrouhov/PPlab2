@@ -1,8 +1,0 @@
-﻿  PP lab2.cpp
-C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(76,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(91,54): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(100,19): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Niko\Desktop\PP lab2\PP lab2\PP lab2.cpp(135,16): warning C4244: return: преобразование "int" в "float", возможна потеря данных
-  PP lab2.vcxproj -> C:\Users\Niko\Desktop\PP lab2\x64\Debug\PP lab2.exe
-  "pwsh.exe" не является внутренней или внешней
-  командой, исполняемой программой или пакетным файлом.
